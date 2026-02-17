@@ -1,6 +1,6 @@
 # templates
 
-## Raison d'être du module
+## Utilisation
 Le dossier *templates* contient les fichiers HTML utilisés par Flask pour générer la page web. Ces fichiers définissent la structure, le contenu et le comportement de l'interface utilisateur.
 
 Dans ce projet, il contient uniquement *index.html*, la page principale de la calculatrice Flask. Ce template est rendu par Flask à chaque requête GET ou POST et reçoit la variable *result* pour afficher le résultat du calcul.
