@@ -22,6 +22,8 @@ Depuis la racine du projet, exécuter les commandes suivantes :
   - `python -m pytest -v`
 - Lancer uniquement les tests des opérateurs :
   - `python -m pytest -v src/tests/test_operators.py`
+- Lancer un test d'opérateur précis :
+  - `python -m pytest -v src/tests/test_operators.py::test_add`
 
 ## Couverture actuelle des tests
 Les tests actuels couvrent les 4 fonctions exposées dans *src/operators.py* :

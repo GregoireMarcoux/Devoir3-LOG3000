@@ -27,8 +27,29 @@ Le programme constitue une calculatrice permettant de faire des additions, soust
 ATTENTION : Une seule opération à la fois peut être réalisée. La calculatrice ne supporte par plusieurs opérations simultanées.
 
 ## Tests
-// TODO
+Les tests unitaires du projet sont regroupés dans le dossier *src/tests*.
+
+### Prérequis
+- Avoir Python installé.
+- Installer *pytest* dans l'environnement Python utilisé :
+  - `python -m pip install pytest`
+
+### Exécuter les tests
+Depuis la racine du projet (*Devoir3-LOG3000*), lancer :
+- Tous les tests :
+  - `python -m pytest -v`
+- Un fichier de test précis :
+  - `python -m pytest -v src/tests/test_operators.py`
+- Un test précis :
+  - `python -m pytest -v src/tests/test_operators.py::test_add`
+
+### Ajouter des tests plus tard
+Pour ajouter de nouveaux tests :
+- Créer (ou compléter) un fichier `test_*.py` dans *src/tests*.
+- Nommer chaque fonction de test avec le préfixe `test_`.
+- Utiliser des `assert` pour valider les résultats attendus.
 
 ## Contributions
 - PlayeerOne (10/20/2025) : Création du projet initial
 - GregoireMarcoux (02/17/2026) : Création du repo et rédaction de la documentation initiale 
+- OlivierThabet (02/17/2026) : Ajout des tests pour operators.py et documentation associée
