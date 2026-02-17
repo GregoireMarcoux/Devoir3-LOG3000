@@ -30,7 +30,15 @@ Il inclut la logique, le serveur web Flask et les dossiers de templates et de fi
   - *style.css* définit l'apparence et la disposition de la calculatrice.
 
 - *tests* :
-  - TODO
+  - Contient les tests unitaires et d'intégration légère du projet.
+  - Fichiers principaux :
+    - *test_operators.py* : tests des fonctions *add*, *subtract*, *multiply* et *divide*.
+    - *test_app.py* : tests de la fonction *calculate(expr)* et de la route principale */* (GET/POST).
+  - Exécution :
+    - Tous les tests : `python -m pytest -v`
+    - Tests des opérateurs : `python -m pytest -v src/tests/test_operators.py`
+    - Tests de l'application : `python -m pytest -v src/tests/test_app.py`
+  - Documentation détaillée : voir *src/tests/README.md*.
 
 ## Dépendances / hypothèses
 - Python et Flask doivent être installés pour exécuter l'application.

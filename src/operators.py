@@ -34,9 +34,9 @@ def subtract(a,b):
     - b (float) : second opérande
 
     Sorties :
-    - float : résultat de b - a
+    - float : résultat de a-b
     """
-    return b - a
+    return a-b
 
 def multiply(a,b):
     """
