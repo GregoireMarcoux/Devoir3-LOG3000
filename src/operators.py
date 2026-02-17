@@ -62,4 +62,4 @@ def divide(a,b):
     Sorties :
     - float : résultat de a / b
     """
-    return a // b
+    return a / b
