@@ -16,7 +16,7 @@ Sorties :
 """
 
 from flask import Flask, request, render_template
-from operators import add, subtract, multiply, divide
+from src.operators import add, subtract, multiply, divide
 
 # Création de l'app flask
 app = Flask(__name__)
