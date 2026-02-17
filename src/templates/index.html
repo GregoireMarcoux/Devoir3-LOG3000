@@ -1,17 +1,43 @@
+<!--
+   Page principale de l'application.
+
+   Rôle :
+   - Fournir l'interface de la calculatrice
+   - Afficher les entrées utilisateur et les résultats
+   - Envoyer l'expression au serveur Flask pour calcul
+
+   Entrées :
+   - Entrées de l'utilisateur (clics sur les boutons)
+   - Variable Flask `result` qui vient du côté serveur
+
+   Sorties :
+   - Affichage des entrées de l'utilisateur sur l'interface
+   - Résultats du calcul affichés dans l'interface
+-->
+
 <!DOCTYPE html>
 <html lang="en">
+<!-- Informations spécifiques à l'application, dont le nom de l'onglet et les règles d'affichage -->
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Flask Calculator</title>
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
+<!-- Corps de la page -->
 <body>
 <div class="calculator">
+   <!-- Titre de la page -->
    <h1>Flask Calculator</h1>
    <form method="POST">
+      <!-- 
+         Champ d'affichage au sommet de la calculatrice 
+         La valeur result provient du serveur Flask et affiche le résultat des opérations
+      -->
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
 
+      <!-- Conteneur ayant tous les boutons (opérations et chiffres) et les appels aux fonctions concernées -->
       <div class="buttons">
          <button type="button" class="btn" onclick="appendToDisplay('1')">1</button>
          <button type="button" class="btn" onclick="appendToDisplay('2')">02</button>
@@ -36,12 +62,15 @@
    </form>
 </div>
 
+
 <script>
+   /** Ajoute une valeur à l'affichage de la calculatrice. Appelé lors de l'appui d'un bouton (sauf C et =) */
    function appendToDisplay(value) {
       const display = document.getElementById('display');
       display.value += value;
    }
 
+   /** Permet de vider la boite d'affichage. Appelée par le bouton C */
    function clearDisplay() {
       document.getElementById('display').value = '';
    }
