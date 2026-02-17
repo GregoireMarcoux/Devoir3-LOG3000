@@ -37,7 +37,7 @@
       -->
       <input type="text" name="display" id="display" value="{{ result }}" readonly>
 
-      <!-- Conteneur ayant tous les boutons (opérations et chiffres) -->
+      <!-- Conteneur ayant tous les boutons (opérations et chiffres) et les appels aux fonctions concernées -->
       <div class="buttons">
          <button type="button" class="btn" onclick="appendToDisplay('1')">1</button>
          <button type="button" class="btn" onclick="appendToDisplay('2')">02</button>
@@ -64,7 +64,7 @@
 
 
 <script>
-   /** Ajoute une valeur à l'affichage de la calculatrice. Appelée lors de l'appui d'un bouton (sauf C et =) */
+   /** Ajoute une valeur à l'affichage de la calculatrice. Appelé lors de l'appui d'un bouton (sauf C et =) */
    function appendToDisplay(value) {
       const display = document.getElementById('display');
       display.value += value;
