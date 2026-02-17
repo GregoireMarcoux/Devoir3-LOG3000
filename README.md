@@ -52,4 +52,4 @@ Pour ajouter de nouveaux tests :
 ## Contributions
 - PlayeerOne (10/20/2025) : Création du projet initial
 - GregoireMarcoux (02/17/2026) : Création du repo et rédaction de la documentation initiale 
-- OlivierThabet (02/17/2026) : Ajout des tests pour operators.py et documentation associée
+- OlivierThabet (02/17/2026) : Ajout des tests pour operators.py, app.py et la documentation associée
